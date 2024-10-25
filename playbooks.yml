@@ -1,0 +1,9 @@
+---
+- hosts: all
+  vars:
+    - docker_compose_install_v1: true
+    - docker_compose_version_v1: "1.29.2"
+  tasks:
+    - name: Docker setup
+      block:
+        - import_role: name=docker
